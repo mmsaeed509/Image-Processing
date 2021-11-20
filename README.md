@@ -8,5 +8,5 @@ This Repo Contains Some Of Image Processing Algorithms Implementations (very sim
 
 ### Implemented Algorithms :-
 
-## `Histogram` `Filters`
+### `Histogram` `Filters`
 

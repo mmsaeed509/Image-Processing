@@ -8,5 +8,5 @@ This Repo Contains Some Of Image Processing Algorithms Implementations (very sim
 
 ### Implemented Algorithms :-
 
-#### [Histogram & Filters](https://github.com/mmsaeed509/Image-Processing/tree/main/Assignments/Assignment_1/ImageSpatialFiltersExperiment-1)
+## `Histogram` `Filters`
 

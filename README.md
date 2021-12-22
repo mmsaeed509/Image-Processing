@@ -6,7 +6,9 @@
 
 This Repo Contains Some Of Image Processing Algorithms Implementations (very simple implementations)
 
-### Implemented Algorithms :-
+### Team 
+[Ozil](https://github.com/mmsaeed509)
 
-### `Histogram` `Filters`
+[Jerry](https://github.com/mohamed-mahmoud377)
 
+[Zeyad](https://github.com/kzeyad)

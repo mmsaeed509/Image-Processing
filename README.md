@@ -6,9 +6,16 @@
 
 This Repo Contains Some Of Image Processing Algorithms Implementations (very simple implementations)
 
-### Team 
+### Assignments Team 
 [Ozil](https://github.com/mmsaeed509)
 
 [Jerry](https://github.com/mohamed-mahmoud377)
 
 [Zeyad](https://github.com/kzeyad)
+
+### Project Team 
+[Ozil](https://github.com/mmsaeed509)
+
+[SkorpioN](https://github.com/0xSkorpioN)
+
+[Hashem](https://github.com/hashemkhaledd)

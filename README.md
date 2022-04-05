@@ -8,26 +8,20 @@ This Repo Contains Some Of Image Processing Algorithms Implementations (very sim
 
 ### Assignments Team 
 
-| [Mahmoud Mohamed](https://github.com/mmsaeed509) | [Abdallah Adham](https://github.com/0xSkorpioN) |
-|--------------------|:---------------------:|
-| <img align="left" width="125" height="125" src="/Images/ozil.png" /> | <img align="left" width="125" height="125" src="/Images/skorpioN.png" /> | 
+| [Mahmoud Mohamed](https://github.com/mmsaeed509) | [Jerry](https://github.com/mohamed-mahmoud377) | [Zeyad Swilam](https://github.com/kzeyad) |
+|--------------------|:---------------------:|:------------|
+| <img align="left" width="125" height="125" src="/Images/ozil.png" /> | <img align="left" width="125" height="125" src="/Images/jerry.png" /> | <img align="left" width="125" height="125" src="/Images/zeyad.png" /> |
 
 
-[Ozil](https://github.com/mmsaeed509)
 
-[Jerry](https://github.com/mohamed-mahmoud377)
 
-[Zeyad](https://github.com/kzeyad)
+
 
 ### Project Team 
 
-| [Mahmoud Mohamed](https://github.com/mmsaeed509) | [Abdallah Adham](https://github.com/0xSkorpioN) |
-|--------------------|:---------------------:|
-| <img align="left" width="125" height="125" src="/Images/ozil.png" /> | <img align="left" width="125" height="125" src="/Images/skorpioN.png" /> | 
+| [Mahmoud Mohamed](https://github.com/mmsaeed509) | [Abdallah Adham](https://github.com/0xSkorpioN) | [Hashem Khaled](https://github.com/hashemkhaledd) |
+|--------------------|:---------------------:|:---------------|
+| <img align="left" width="125" height="125" src="/Images/ozil.png" /> | <img align="left" width="125" height="125" src="/Images/skorpioN.png" /> | <img align="left" width="125" height="125" src="/Images/H.png" /> |
 
 
-[Ozil](https://github.com/mmsaeed509)
 
-[SkorpioN](https://github.com/0xSkorpioN)
-
-[Hashem](https://github.com/hashemkhaledd)

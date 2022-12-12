@@ -53,7 +53,7 @@ cv2.waitKey(1000)
 
 # Apply Edge linking using Hough Transform #
 
-img = cv2.imread('img/testLines.jpg')
+img = cv2.imread('img/sudoku.png')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 edges = cv2.Canny(gray, 50, 150, apertureSize=3)
 

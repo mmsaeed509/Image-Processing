@@ -6,6 +6,8 @@
 
 This Repo Contains Some Of Image Processing Algorithms Implementations (very simple implementations)
 
+<!-- 
+
 ### Assignments Team 
 
 | [Mahmoud Mohamed](https://github.com/mmsaeed509) | [Jerry](https://github.com/mohamed-mahmoud377) | [Zeyad Swilam](https://github.com/kzeyad) |
@@ -24,4 +26,4 @@ This Repo Contains Some Of Image Processing Algorithms Implementations (very sim
 | <img align="left" width="125" height="125" src="/Images/ozil.png" /> | <img align="left" width="125" height="125" src="/Images/skorpion.png" /> | <img align="left" width="125" height="125" src="/Images/H.png" /> |
 
 
-
+ -->

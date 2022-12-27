@@ -48,7 +48,7 @@ img = cv2.imread('dataset/15.jpg', 0)
 img = cv2.medianBlur(img, 5)  # improve result of circle detection #
 ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)  # Binary Thresholding #
 th2 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)  # Adaptive Mean #
-th3 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)  # Adaptive Mean #
+th3 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)  # Adaptive Gaussian #
 titles = ['Original Image', 'Global Thresholding (v = 127)', 'Adaptive Mean', 'Adaptive Gaussian']
 images = [img, th1, th2, th3]
 

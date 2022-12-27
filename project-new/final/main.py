@@ -15,16 +15,16 @@ from matplotlib import pyplot as plt
 # ----------------- canny detection (edges detection) ----------------- #
 IMAGE = 'dataset/15.jpg'
 IMAGE_2 = 'dataset/13.png'
-img = cv2.imread(IMAGE_2)
+img = cv2.imread(IMAGE)
 edges = cv2.Canny(img, 100, 200)
 cv2.imshow("Edges", edges)
 cv2.imwrite('edges.jpg', edges)
-cv2.waitKey(1000)
+cv2.waitKey(10000)
 
 # ----------------- Hough circle transform ( circle detection ) ----------------- #
 
 # arg 2 -> to read as a grey scale not RGB scale  #
-img = cv2.imread(IMAGE_2, 0)
+img = cv2.imread(IMAGE, 0)
 img = cv2.medianBlur(img, 5)  # improve result of circle detection #
 
 # from grey scale to RGB #
@@ -48,13 +48,13 @@ for i in circles[0, :]:
 
 cv2.imshow('Circle Detection', cimg)
 cv2.imwrite('circle.jpg', cimg)
-cv2.waitKey(1000)
+cv2.waitKey(10000)
 cv2.destroyAllWindows()
 
 # ----------------- Thresholding ----------------- #
 
 # arg 2 -> to read as a grey scale not RGB scale  #
-img = cv2.imread(IMAGE_2, 0)
+img = cv2.imread(IMAGE, 0)
 img = cv2.medianBlur(img, 5)  # improve result of circle detection #
 ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)  # Binary Thresholding #
 th2 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)  # Adaptive Mean #
@@ -72,7 +72,7 @@ plt.show()
 # ----------------- Segmentation (Final) ----------------- #
 
 # Read in the image 3
-image = cv2.imread(IMAGE_2)
+image = cv2.imread(IMAGE)
 
 # Change color to RGB (from BGR) #
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
@@ -104,4 +104,4 @@ segmented_image = segmented_data.reshape(image.shape)
 print(set(labels.flatten()))
 cv2.imshow("Oil", segmented_image)
 cv2.imwrite('segmented_image.jpg', segmented_image)
-cv2.waitKey(1000000)
+cv2.waitKey(10000)

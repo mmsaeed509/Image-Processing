@@ -1,3 +1,13 @@
+"""
+######################################
+#
+# 﫥  @author   : 00xWolf
+#   GitHub    : @mmsaeed509
+#   Developer : Mahmoud Mohamed
+#
+######################################
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
@@ -31,7 +41,7 @@ centers = np.uint8(centers)
 segmented_data = centers[labels.flatten()]
 
 # reshape data into the original image dimensions
-segmented_image = segmented_data.reshape((image.shape))
+segmented_image = segmented_data.reshape(image.shape)
 print(set(labels.flatten()))
 cv2.imshow("Oil", segmented_image)
 cv2.waitKey(1000000)

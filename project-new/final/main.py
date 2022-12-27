@@ -95,11 +95,13 @@ criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 100, 0.85)
 k = 3
 retval, labels, centers = cv2.kmeans(pixel_vals, k, None, criteria, 10, cv2.KMEANS_RANDOM_CENTERS)
 
+# calculate the new centers for each class (clustering)
 # convert data into 8-bit values
 centers = np.uint8(centers)
 segmented_data = centers[labels.flatten()]
 
-# reshape data into the original image dimensions
+# reshape data into the original image dimensions (same like original)
+# draw the new image with same size of original photo
 segmented_image = segmented_data.reshape(image.shape)
 print(set(labels.flatten()))
 cv2.imshow("Oil", segmented_image)

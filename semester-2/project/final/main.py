@@ -104,6 +104,6 @@ segmented_data = centers[labels.flatten()]
 # draw the new image with same size of original photo
 segmented_image = segmented_data.reshape(image.shape)
 print(set(labels.flatten()))
-cv2.imshow("Oil", segmented_image)
+cv2.imshow("Segmented image", segmented_image)
 cv2.imwrite('segmented_image.jpg', segmented_image)
 cv2.waitKey(10000)

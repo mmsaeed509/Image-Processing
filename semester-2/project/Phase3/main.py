@@ -43,5 +43,5 @@ segmented_data = centers[labels.flatten()]
 # reshape data into the original image dimensions
 segmented_image = segmented_data.reshape(image.shape)
 print(set(labels.flatten()))
-cv2.imshow("Oil", segmented_image)
+cv2.imshow("Segmented image", segmented_image)
 cv2.waitKey(1000000)

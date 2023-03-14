@@ -1,11 +1,10 @@
 # # # # # # # # # # # # # # # # # #
-#                                 #
-# 﫥  @author   : 00xWolf          #
-#   GitHub    : @mmsaeed509      #
-#   Developer : Mahmoud Mohamed  #
-#                                 #
+#
+# 﫥  @author   : 00xWolf
+#   GitHub    : @mmsaeed509
+#   Developer : Mahmoud Mohamed
+#
 # # # # # # # # # # # # # # # # # #
-
 
 import cv2
 import numpy

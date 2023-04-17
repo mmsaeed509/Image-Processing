@@ -14,7 +14,8 @@ import COLORS
 # read image #
 img = cv2.imread("kernel.png", cv2.IMREAD_COLOR)
 
-# converted it to 2D Grey image #
+# converted it to 2D Grey image #/home/ozil/.local/share/virtualenvs/Image-Processing-WgoHXI-i/bin/python /home/ozil/GitHub/FCAI-CU/Image-Processing/semester-3/Assignment-2/Task-1/main.py
+
 grey_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # write new image #

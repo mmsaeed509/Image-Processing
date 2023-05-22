@@ -28,18 +28,21 @@ cimg = cv2.cvtColor(img, cv2.COLOR_GRAY2BGR)  # cv2 always work with grey scale 
 # arg 6 -> the accumulator threshold for the circle centers at the detection stage.
 # arg 7 -> minimum circle radius.
 # arg 8 -> maximum circle radius.
-circles = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT, 1, 20, param1=50, param2=30, minRadius=0, maxRadius=0)
+circles = cv2.HoughCircles(img, cv2.HOUGH_GRADIENT, 1, 50, param1=50, param2=30, minRadius=0, maxRadius=0)
 
 circles = np.uint16(np.around(circles))  # convert all numbers to integers not float #
 
-# draw the detected circles #
+# draw the detected circles
+# loop over all the detected circles
 for i in circles[0, :]:
+    # Draw the outer circle with Green color (you can chang the color with the 4th par `(0, 255, 0)` ) #
     cv2.circle(cimg, (i[0], i[1]), i[2], (0, 255, 0), 2)
+    # Draw the center of the circle with Red color (you can chang the color with the 4th par `(0, 0, 255)` ) #
     cv2.circle(cimg, (i[0], i[1]), 2, (0, 0, 255), 3)
 
 cv2.imshow('Circle Detection', cimg)
 cv2.imwrite('circle.jpg', cimg)
-cv2.waitKey(5000)
+cv2.waitKey(2000)
 cv2.destroyAllWindows()
 
 # ----------------- Thresholding ----------------- #
@@ -47,11 +50,24 @@ cv2.destroyAllWindows()
 # arg 2 -> to read as a grey scale not RGB scale  #
 img = cv2.imread(IMAGE, 0)
 img = cv2.medianBlur(img, 5)  # improve result of circle detection #
-ret, th1 = cv2.threshold(img, 127, 255, cv2.THRESH_BINARY)  # Binary Thresholding #
-th2 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)  # Adaptive Mean #
-th3 = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)  # Adaptive Gaussian #
-titles = ['Original Image', 'Global Thresholding (v = 127)', 'Adaptive Mean', 'Adaptive Gaussian']
-images = [img, th1, th2, th3]
+# Binary Thresholding
+# converts the image into a binary image, where pixel values below the threshold (127 in this case) are set to 0
+# and values above the threshold are set to 255.
+ret, BinaryThresholding = cv2.threshold(img, 90, 255, cv2.THRESH_BINARY)
+
+# Adaptive Mean
+# Adaptive thresholding calculates the threshold value for each pixel based on a local neighborhood around it.
+# The neighborhood size is specified as `(11, 2)`,
+AdaptiveThresholding = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 11, 2)
+
+# Adaptive Gaussian
+# threshold value is calculated as the weighted sum of the neighborhood pixels,
+# where the weights are determined by a Gaussian window.
+AdaptiveThresholdingGaussian = cv2.adaptiveThreshold(img, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 11, 2)
+
+
+titles = ['Original Image', 'Binary Threshold (v = 90)', 'Adaptive Mean', 'Adaptive Gaussian']
+images = [img, BinaryThresholding, AdaptiveThresholding, AdaptiveThresholdingGaussian]
 
 for i in range(4):
     plt.subplot(2, 2, i + 1), plt.imshow(images[i], 'gray')
@@ -69,11 +85,14 @@ image = cv2.imread(IMAGE)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 plt.imshow(image)
 
-# Reshaping the image into a 2D array of pixels and 3 color values (RGB) #
-# -1 for auto complete the new matrix shape #
+# prepare the image data for the k-means clustering by Reshaping the image into
+# a 2D array of pixels and 3 color values (RGB). (create a new matrix)
+# `-1` for auto complete the new matrix shape.
+# `3` each pixel has three color channels.
 pixel_vals = image.reshape((-1, 3))
 
-# Convert to float type #
+# Convert to float type to provide greater precision
+# and allows for more accurate calculations
 pixel_vals = np.float32(pixel_vals)
 
 # the below line of code defines the criteria for the algorithm to stop running (to stop algo)
@@ -97,4 +116,4 @@ segmented_image = segmented_data.reshape(image.shape)
 print(set(labels.flatten()))
 cv2.imshow("Segmented image", segmented_image)
 cv2.imwrite('segmented_image.jpg', segmented_image)
-cv2.waitKey(5000)
+cv2.waitKey(2000)
